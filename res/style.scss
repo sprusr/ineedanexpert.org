@@ -1,0 +1,84 @@
+$header-height: 80px;
+$page-width: 1100px;
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.home-hero-section {
+  background-image: url('/res/bg.jpg');
+  min-height: 80vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.header-container {
+  width: 100%;
+  max-width: $page-width;
+  margin: 0 auto;
+  line-height: $header-height;
+
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.header-logo {
+  float: left;
+  img {
+    height: $header-height;
+  }
+}
+
+.header-account {
+  float: right;
+}
+
+.page-container {
+  width: 100%;
+  max-width: $page-width;
+  margin: 0 auto;
+}
+
+.search-form {
+  $search-border-radius: 5px;
+  $search-bg-color: rgb(244, 0, 0);
+
+  text-align: center;
+  width: 480px;
+  margin: 0 auto;
+
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+  input {
+    height: 26pt;
+    float: left;
+    margin: 0;
+    border: none;
+    padding: 0;
+  }
+
+  input[type="text"] {
+    width: 400px;
+    font-size: 16pt;
+    border-radius: $search-border-radius 0 0 $search-border-radius;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+
+  input[type="submit"] {
+    width: 80px;
+    border: none;
+    background-color: $search-bg-color;
+    color: #fff;
+    border-radius: 0 $search-border-radius $search-border-radius 0;
+  }
+}
