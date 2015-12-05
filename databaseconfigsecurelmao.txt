@@ -1,0 +1,6 @@
+USERS(userID, userName, totalScore, totalVotes, userPicture, userCredits)
+QUESTION(questionID, userID, questionText, questionKeywords)
+
+ineedanexpertdb.ctjop96n8o3k.us-east-1.rds.amazonaws.com:3306
+nat
+password123
