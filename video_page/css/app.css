@@ -11,7 +11,7 @@ body, html {
 }
 #subscriber {
     position: absolute;
-    left: 0;
+    left: 10%;
     top: 15%;
     width: 30%;
     height: 80%;
@@ -24,7 +24,7 @@ body, html {
     width: 30%;
     height: 80%;
     top: 15%;
-    right: 0;
+    right: 10%;
     z-index: 100;
     border: 3px solid white;
     border-radius: 3px;
