@@ -27,21 +27,8 @@ body {
 }
 
 .home-hero-section {
-<<<<<<< HEAD
   background-image: url("/res/bg1.jpg");
   background-color: #384348;
-=======
-<<<<<<< HEAD
-  background-image: url("/res/bg1.jpg");
-  background-color: #384348;
-=======
-<<<<<<< HEAD
-  background-image: url("/res/bg1.jpg");
-=======
-  background-image: url("/res/bg.jpg");
->>>>>>> origin/master
->>>>>>> origin/master
->>>>>>> origin/master
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
@@ -189,17 +176,6 @@ li a:hover:not(.active) {
 .active {
     background-color: #4CAF50;
 }
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/master
->>>>>>> origin/master
->>>>>>> origin/master
 .generalpage{
   width: 100%;
   background: rgba(45, 45, 45, .5);
@@ -242,13 +218,6 @@ a{
 
   color: white;
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/master
->>>>>>> origin/master
 
 .donatetime {
 	-moz-box-shadow: 0px 1px 0px 0px #fff6af;
@@ -362,15 +331,4 @@ margin-bottom: 15px;
 
 
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-=======
-
->>>>>>> origin/master
->>>>>>> origin/master
->>>>>>> origin/master
->>>>>>> origin/master
 /*# sourceMappingURL=style.css.map */

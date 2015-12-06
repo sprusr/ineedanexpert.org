@@ -33,15 +33,9 @@
           <input type="submit" value="Search">
         </form>
           <div style="padding-top: 55px;"></div>
-<<<<<<< HEAD
           <a class="icanhelp" href="register.php">Do you have expertise to share?</a>
-=======
-<<<<<<< HEAD
           <a class="icanhelp" href="register.php">Do you have expertise to share?</a>
-=======
           <a class="icanhelp" href="lol.php">Do you have expertise to share?</a>
->>>>>>> origin/master
->>>>>>> origin/master
       </div>
     </div>
   </div>
