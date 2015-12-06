@@ -66,7 +66,7 @@
 			});
 
 			session.on('sessionDisconnected', function(event) {
-				alert('You were disconnected from the session.', event.reason);
+				//alert('You were disconnected from the session.', event.reason);
 				setTimeout(5000, redirect(userType));
 			});
 
@@ -96,9 +96,7 @@
 		}
 
 		function endSession() {
-			alert("before");
 			session.disconnect();
-			alert("after");
 		}
 	</script>
 
