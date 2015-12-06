@@ -8,22 +8,38 @@
 </head>
 <body>
   <div class="home-hero-section">
-    <div class="header">
-      <div class="header-container">
-        <div class="header-logo">
-          <a href="/"><img src="/res/logo_white.png" alt=""></a>
+    <div class="headerenclosure">
+      <div class="header">
+        <div class="header-container">
+          <div class="header-logo">
+            <a href="/"><img src="/res/logo/logo_small_white.png" alt=""></a>
+          </div>
+          <ul style="float: left">
+            <li><a class="active" href="#home">Homepage</a></li>
+            <li><a href="#news">Login</a></li>
+            <li><a href="#contact">Register</a></li>
+          </ul>
+          <div class="header-account">
+            <div class="header-account-text">Welcome, Guest</div>
+            <img src="/res/personicon.png" alt="Account">
+          </div>
         </div>
-        <div class="header-account">
-          <img src="/res/avatar.png" alt="Account">
-        </div>
+
       </div>
     </div>
     <div class="page-container">
+      <div class="home_tagline">
+          <img src="res/question.png" alt="image isn't working lol"/>
+            <p style="text-align: center;">I need an expert is a video calling platform which connects experts to learners that need a hand.</p>
+          <img src="res/sellingpitch.png" alt="more stuff isn't loading lol" />
+      </div>
       <div class="search-form">
         <form action="/search.php" method="get">
-          <input type="text" placeholder="Search for an expert">
+          <input type="text" placeholder="What are you stuck on? (e.g. 'drawing')">
           <input type="submit" value="Search">
         </form>
+          <div style="padding-top: 55px;"></div>
+          <a class="icanhelp" href="lol.php">Do you have expertise to share?</a>
       </div>
     </div>
   </div>
