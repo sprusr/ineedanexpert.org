@@ -88,10 +88,10 @@
 		function redirect(userType) {
 			if (userType == "asker") {
 				//set to location asker should be sent
-				window.location = "video_page/lol.php";
+				window.location = "index.php";
 			} else {
 				//set to location answerer should be sent
-				window.location = "video_page/lol.php";
+				window.location = "index.php";
 			}
 		}
 
