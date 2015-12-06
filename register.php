@@ -1,4 +1,59 @@
+<?php
 
+ini_set ("display_errors", "1");
+error_reporting(E_ALL);
+
+// Require the file to connect to the db :)
+
+$errorflag = 0;
+$overallsuccess = 0;
+
+require 'dbconnect.php';
+
+if (isset($_POST["username"]) && !empty($_POST["username"])) {
+//echo "Yes, username is set";
+//echo ($_POST["username"]);
+}
+else{
+$errorflag++;
+//echo "You didn't specify a username!";
+}
+if (isset($_POST["password"]) && !empty($_POST["password"])) {
+//echo "Yes, password is set";
+//echo ($_POST["password"]);
+}
+else{
+//$errorflag++;
+//echo "You didn't specify a password!";
+}
+
+if ($errorflag == 0){
+    // No errors so attempt to register the user
+
+   $usernamedoe = $_POST['username'];
+   $passwordoe = $_POST['password'];
+   $overallsuccess = 1;
+
+   $sql="INSERT INTO `USERS` (`userName`, `userPassword`, `userTotalScore`, `userTotalVotes`) VALUES ('$usernamedoe', '$passwordoe', '0', '0')";
+   if ($link->query($sql) === TRUE) {
+     //SUCCESS!!!!!!!!!
+     $overallsuccess = "1";
+     $cookie_name = "userid";
+     $cookie_value = "$usernamedoe";
+     setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+} else {
+echo "Error: " . $sql . "<br>" . $link->error;
+}
+
+}
+else{
+
+
+}
+
+
+
+?>
 <!doctype html>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,62 +64,7 @@
 </head>
 <body>
   <div class="home-hero-section">
-    <?php
 
-    ini_set ("display_errors", "1");
-error_reporting(E_ALL);
-
-    // Require the file to connect to the db :)
-
-    $errorflag = 0;
-    $overallsuccess = 0;
-
-    require 'dbconnect.php';
-
-    if (isset($_POST["username"]) && !empty($_POST["username"])) {
-    //echo "Yes, username is set";
-    //echo ($_POST["username"]);
-    }
-    else{
-    $errorflag++;
-    //echo "You didn't specify a username!";
-    }
-    if (isset($_POST["password"]) && !empty($_POST["password"])) {
-    //echo "Yes, password is set";
-    //echo ($_POST["password"]);
-    }
-    else{
-    //$errorflag++;
-    //echo "You didn't specify a password!";
-    }
-
-    if ($errorflag == 0){
-        // No errors so attempt to register the user
-
-       $usernamedoe = $_POST['username'];
-       $passwordoe = $_POST['password'];
-       $overallsuccess = 1;
-
-       $sql="INSERT INTO `USERS` (`userName`, `userPassword`, `userTotalScore`, `userTotalVotes`) VALUES ('$usernamedoe', '$passwordoe', '0', '0')";
-       if ($link->query($sql) === TRUE) {
-         //SUCCESS!!!!!!!!!
-         $overallsuccess = "1";
-         $cookie_name = "userid";
-         $cookie_value = "$usernamedoe";
-         setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
-} else {
-    echo "Error: " . $sql . "<br>" . $link->error;
-}
-
-    }
-    else{
-
-
-    }
-
-
-
-    ?>
     <div class="headerenclosure">
       <div class="header">
         <div class="header-container">
