@@ -10,7 +10,7 @@
 
 <head>
     <title>Chat</title>
-    <link href="/css/app.css" rel="stylesheet" type="text/css">
+    <link href="css/app.css" rel="stylesheet" type="text/css">
 
     <script src="https://static.opentok.com/v2/js/opentok.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -22,22 +22,22 @@
         <div id="subscriber"></div>
         <div id="publisher"></div>
     </div>
-	
+
 	<div style="height: 5%"></div>
-	
+
 	<?php
-		require "C:\Users\Alex\Downloads\Utilities\Files\opentok.phar";
+		require "opentok.phar";
 		use OpenTok\OpenTok;
-		
+
 		//$sessionID = $_POST["sessionID"];
 		$sessionID = "1_MX40NTQyNzc3Mn5-MTQ0OTM3NDM1MTk4Mn5MVStKL1lkVVBQcHN1L0pDWDMydmxMMjl-UH4";
 		$opentok = new OpenTok(45427772, "51ce05e8512d7bb676c94be7fe86cd692b32793a");
 		$token = $opentok->generateToken($sessionID);
 		$apiKey = 45427772;
-		
+
 		$_POST["userType"] = "asker";
 	?>
-	
+
 	<script type="text/javascript">
 		var apiKey,
 			sessionId,
@@ -59,12 +59,12 @@
 
 			session.on('streamCreated', function(event) {
 				session.subscribe(event.stream, 'subscriber', {
-					nsertMode: 'append',
+					insertMode: 'append',
 					width: '100%',
 					height: '100%'
 				});
 			});
-			
+
 			session.on('sessionDisconnected', function(event) {
 				alert('You were disconnected from the session.', event.reason);
 				setTimeout(5000, redirect(userType));
@@ -84,7 +84,7 @@
 				}
 			});
 		}
-		
+
 		function redirect(userType) {
 			if (userType == "asker") {
 				//set to location asker should be sent
@@ -94,18 +94,18 @@
 				window.location = "lol.php";
 			}
 		}
-		
+
 		function endSession() {
 			alert("before");
 			session.disconnect();
 			alert("after");
 		}
 	</script>
-	
+
 	<div id="endsession">
 		<button onclick="endSession();">End Session</button>
 	</div>
-	
+
 	<!--<script type="text/javascript" src="js/app.js"></script>-->
 	<script type="text/javascript" src="js/config.js"></script>
 
