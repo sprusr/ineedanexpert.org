@@ -6,6 +6,7 @@
   <meta charset="UTF-8">
   <title>I need an expert</title>
   <link rel="stylesheet" href="/res/style.css">
+<<<<<<< HEAD
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script>
   $(document).ready(function(){
@@ -23,6 +24,8 @@
 
   });
   </script>
+=======
+>>>>>>> origin/master
 </head>
 <body>
   <div class="home-hero-section">
@@ -36,7 +39,11 @@ error_reporting(E_ALL);
     $errorflag = 0;
     $overallsuccess = 0;
 
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> origin/master
 
     require 'dbconnect.php';
 
@@ -74,6 +81,7 @@ error_reporting(E_ALL);
       <div class="generalpage" style="width: 100%;">
         <div class="generalpageholder" style="width: 50%;">
           <h1>What would you like to do?</h1>
+<<<<<<< HEAD
             <div class="buttonholder" style="width: 100; margin 0 auto;">
 
               <a href="#" id="askadvice">I want to get expert advice</a>
@@ -92,6 +100,9 @@ error_reporting(E_ALL);
               </form>
               </div>
             </div>
+=======
+
+>>>>>>> origin/master
         </div>
       </div>
 
