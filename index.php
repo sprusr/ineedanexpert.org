@@ -34,8 +34,6 @@
         </form>
           <div style="padding-top: 55px;"></div>
           <a class="icanhelp" href="register.php">Do you have expertise to share?</a>
-          <a class="icanhelp" href="register.php">Do you have expertise to share?</a>
-          <a class="icanhelp" href="lol.php">Do you have expertise to share?</a>
       </div>
     </div>
   </div>
