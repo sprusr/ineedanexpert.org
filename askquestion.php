@@ -1,4 +1,56 @@
+<?php
 
+ini_set ("display_errors", "1");
+error_reporting(E_ALL);
+
+// Require the file to connect to the db :)
+
+$errorflag = 0;
+$overallsuccess = 0;
+
+
+
+require 'dbconnect.php';
+
+if (isset($_POST["username"]) && !empty($_POST["username"])) {
+//echo "Yes, username is set";
+//echo ($_POST["username"]);
+
+$cookie_name = "userid";
+$cookie_value = $_POST["username"];
+setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+header('Location: manager.php');
+
+}
+else{
+  //echo "Invalid credentials!";
+
+}
+
+$cookie_name = "userid";
+$cookie_value = $_COOKIE[$cookie_name];
+
+$sql="SELECT * FROM ACTIVECALLS WHERE askerID = '$cookie_value' AND helperID IS NOT NULL";
+
+if ($result = mysqli_query($link, $sql)) {
+
+/* fetch associative array */
+$counter = 0;
+
+while ($row = mysqli_fetch_assoc($result)) {
+$counter ++;
+}
+
+//echo $counter;
+if($counter > 0){
+
+header('Location: startcall.php?token=434871827182187');
+
+}
+
+
+
+?>
 <!doctype html>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,59 +79,7 @@
 </head>
 <body>
   <div class="home-hero-section">
-    <?php
 
-    ini_set ("display_errors", "1");
-error_reporting(E_ALL);
-
-    // Require the file to connect to the db :)
-
-    $errorflag = 0;
-    $overallsuccess = 0;
-
-
-
-    require 'dbconnect.php';
-
-    if (isset($_POST["username"]) && !empty($_POST["username"])) {
-    //echo "Yes, username is set";
-    //echo ($_POST["username"]);
-
-    $cookie_name = "userid";
-    $cookie_value = $_POST["username"];
-    setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
-    header('Location: manager.php');
-
-    }
-    else{
-      //echo "Invalid credentials!";
-
-    }
-
-    $cookie_name = "userid";
-    $cookie_value = $_COOKIE[$cookie_name];
-
-    $sql="SELECT * FROM ACTIVECALLS WHERE askerID = '$cookie_value' AND helperID IS NOT NULL";
-
-    if ($result = mysqli_query($link, $sql)) {
-
-/* fetch associative array */
-$counter = 0;
-
-while ($row = mysqli_fetch_assoc($result)) {
-$counter ++;
-}
-
-//echo $counter;
-if($counter > 0){
-
-header('Location: startcall.php?token=434871827182187');
-
-}
-
-
-
-    ?>
     <div class="headerenclosure">
       <div class="header">
         <div class="header-container">
